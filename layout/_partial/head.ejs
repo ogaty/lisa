@@ -1,10 +1,9 @@
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="icon" type="image/png" href="https://ogatism-content.netlify.app/ogatism.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="https://contents.ogatism.net/ogatism.png">
+    <%- css('sass/style.css') %>
 
     <!--Description-->
     <% if (page.description){ %>
@@ -39,26 +38,21 @@
 
     <!-- Title -->
     <%
-        var title = [];
-        if (page.current > 1) title.push(__('page', page.current));
-        if (page.title) title.push(page.title);
-        if (page.category) title.push(page.category);
-        if (page.tag) title.push(page.tag);
-        if (page.archive) {
-            if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
-            else title.push(__('archive_a'));
-        }
-        title.push(config.title);
+    var title = [];
+    if (page.current > 1) title.push(__('page', page.current));
+    if (page.title) title.push(page.title);
+    if (page.category) title.push(page.category);
+    if (page.tag) title.push(page.tag);
+    if (page.archive) {
+        if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+        else title.push(__('archive_a'));
+    }
+    title.push(config.title);
     %>
     <title><%= title.join(' - ') %></title>
 
+    <style>
+
+    </style>
     <!-- Custom CSS -->
-    <%- css('sass/main.css') %>
-
-    <!-- Gallery -->
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Google Analytics -->
-    <%- partial('google-analytics') %>
-
 </head>

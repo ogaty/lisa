@@ -1,19 +1,21 @@
 <!-- Header -->
 <header id="header">
     <div class="inner">
-
-        <!-- Logo -->
-        <a href="<%- config.root %>" class="logo">
-            <span class="symbol"><img src="<%- theme.logo_src %>" alt="" /></span><span class="title"><%-config.title || ""%></span>
-        </a>
-
         <!-- Nav -->
         <nav>
             <ul>
                 <li><a href="#menu">Menu</a></li>
             </ul>
         </nav>
+    </div>
 
+    <div class="main-image">
+        <a href="/">
+            <img width="320" height="100" src="https://contents.ogatism.net/ogatismLogoB2.png" alt="ogatism">
+            <div class="subtitle">
+                頑張るあなたを、応援してます。
+            </div>
+        </a>
     </div>
 </header>
 
@@ -21,10 +23,10 @@
 <nav id="menu">
     <h2>Menu</h2>
     <ul>
-        <% for (var i in theme.menu){ %>
-            <li>
-                <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-            </li>
-        <% } %>
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/fixed/about/">はじめに</a></li>
+        <li><a href="/tag/fortune/">星占い</a></li>
+        <li><a href="/tag/techs/">Techs</a></li>
+        <li><a href="/fixed/biz/">仕事依頼・問い合わせ</a></li>
     </ul>
 </nav>

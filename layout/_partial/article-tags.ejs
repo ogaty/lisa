@@ -10,3 +10,14 @@ item.tags.forEach(function(tag){
     <%- tags.join(' ') %>
 </div>
 
+<%
+var cate = [];
+item.categories.forEach(function(c){
+    cate.push('<a href="' + config.root + c.path + '" class="button small">' + c.name + '</a>');
+});
+%>
+
+<div class="tags">
+    <%- cate.join(' ') %>
+</div>
+
