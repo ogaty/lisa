@@ -3,10 +3,20 @@
     <p><%- theme.susbtitle_secondary %></p>
 </header>
 
-<section class="tiles">
+<main>
     <% page.posts.forEach(function(item, index){ %>
         <%- partial('_partial/article-index', {item: item, index: index}) %>
     <% }); %>
-</section>
+
+        <div class="paginate">
+            <div class="newer">
+                <a href="/">< newer posts</a>
+            </div>
+            <div class="older">
+                <a href="/">older posts ></a>
+            </div>
+        </div>
+
+</main>
 
 <%- partial('_partial/pagination') %>

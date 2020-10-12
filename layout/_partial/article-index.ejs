@@ -3,13 +3,28 @@
 %>
 
 <article class="<%- cssClass %>">
-    <span class="image">
-        <img src="<%- item.cover_index || theme.default_cover_index %>" alt="" />
-    </span>
-    <a href="<%- config.root %><%- item.path %>">
-        <h2><%- item.title || theme.default_post_title || "Untitled" %></h2>
-        <div class="content">
-            <p><%- item.excerpt || "" %></p>
+    <div class="article-header">
+        <div class="article-category">
+            <a href="/">Techs</a>
         </div>
-    </a>
+        <div class="article-title">
+            <a href="<%- config.root %><%- item.path %>"><%- item.title || theme.default_post_title || "Untitled" %></a>
+        </div>
+        <div class="article-created">
+            2020.10.12
+        </div>
+    </div>
+    <div class="article-image">
+        <img src="https://dummyimage.com/800x400/aaaaaa/404040/">
+    </div>
+    <div class="article-content">
+        <div class="reading">
+            <%- item.excerpt || "" %>
+        </div>
+        <div class="entry-more">
+            <a href="<%- config.root %><%- item.path %>">
+                Read more
+            </a>
+        </div>
+    </div>
 </article>
