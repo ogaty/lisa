@@ -6,14 +6,16 @@
 <div id="wrapper">
     <%- partial('_partial/menu') %>
     <div class="container">
-        <main>
-        </main>
 
         <!-- Main Content -->
+        <%
+            // 記事一覧の場合article-index、過去記事の場合archive、詳細の場合article-fullへ
+        %>
         <%- body %>
 
     </div>
     <%- partial('_partial/footer.ejs') %>
+
     <!-- After footer scripts -->
     <%- partial('_partial/after-footer') %>
 </div>
